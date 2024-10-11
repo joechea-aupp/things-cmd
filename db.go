@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"os"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -25,7 +26,12 @@ type Things3 struct {
 }
 
 func (s *Sqlite) New() error {
-	db, err := sql.Open("sqlite3", "./db/things.db")
+	hdir, err := os.UserHomeDir()
+	if err != nil {
+		return err
+	}
+
+	db, err := sql.Open("sqlite3", hdir+"/.local/share/things-cmd/things.db")
 	if err != nil {
 		return err
 	}

@@ -34,4 +34,5 @@ add -t "Task Title" -d "Task Description"
 `-d` is optional.
 
 
+Default database path is `~/.local/share/things-cmd/things.db`
 **Note:** credential store in sqlite3 database is not encrypted. Please be aware of that.
