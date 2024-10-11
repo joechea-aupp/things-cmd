@@ -23,11 +23,15 @@ For the first time, you need to configure email address (credentials and server)
 add -host smtp.gmail.com -port 587 -u username@gmail.com -p AppPassword
 ```
 
+**Note:** To update the configuration, you can run the same command with different values.
+
+
 Then you can add a task by running the following command:
 ```
 add -t "Task Title" -d "Task Description"
 ```
 
 `-d` is optional.
+
 
 **Note:** credential store in sqlite3 database is not encrypted. Please be aware of that.
